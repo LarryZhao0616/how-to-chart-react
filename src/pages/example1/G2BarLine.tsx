@@ -4,8 +4,8 @@ import mock, { s1, s2, xSet } from '@/../mock/mockData';
 import G2, { Chart } from '@antv/g2';
 import DataSet from '@antv/data-set';
 const base_Style = {
-  height: 450,
-  width: 800,
+  height: 270,
+  width: 480,
 };
 const G2BarLine = () => {
   const chartParent = useRef<HTMLDivElement | null>(null);
@@ -45,12 +45,7 @@ const G2BarLine = () => {
     chart
       .line()
       .position('day*value')
-      .color('type')
-    chart
-      .point()
-      .position('day*value')
-      .color('type')
-      .shape('type');
+      .color('type');
     chart.render();
     chartRef.current = chart;
   };

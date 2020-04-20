@@ -1,4 +1,5 @@
 import React from 'react';
+import mock, { s1, s2, xSet } from '@/../mock/mockData';
 import ReactEcharts from 'echarts-for-react';
 
 const echart_pie_option = {
@@ -7,14 +8,14 @@ const echart_pie_option = {
   },
   // xAxis: {
   //   type: 'category',
-  //   data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  //   data: xSet,
   // },
   // yAxis: {
   //   type: 'value',
   // },
   series: [
     {
-      data: [{ value: 12, name: 'test' }, 200, 150, 80, 270, 110, 130],
+      data: mock,
       //data: [12, 200, 150, 80, 270, 110, 130],
       type: 'pie',
       //roseType: true,

@@ -1,21 +1,44 @@
 import React from 'react';
+import mock, { s1, s2, xSet } from '@/../mock/mockData';
 import ReactEcharts from 'echarts-for-react';
 
 const echart_bar_option = {
-  title: {
-    text: 'ECharts Bar',
+  // title: {
+  //   text: 'ECharts Bar',
+  // },
+  grid: {
+    height: 270,
+    width: 480,
+    left: '0%',
+    bottom: '3%',
+    containLabel: true,
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow',
+    },
   },
   xAxis: {
     type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    data: xSet,
+  },
+  legend: {
+    data: ['iOS', 'Android'],
   },
   yAxis: {
     type: 'value',
   },
   series: [
     {
-      data: [120, 200, 150, 80, 270, 110, 130],
+      data: s1,
       type: 'bar',
+      name: 'iOS',
+    },
+    {
+      data: s2,
+      type: 'bar',
+      name: 'Android',
     },
   ],
 };
