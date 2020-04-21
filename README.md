@@ -16,7 +16,7 @@ $ yarn start
 
 ## Content part1
 
-Echart vs antv/G2, show you why G2 is better for further,
+Echart vs antv/G2, show you why G2 is better for further development,
 
 ```
  // src/pages/example1
